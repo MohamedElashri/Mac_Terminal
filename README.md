@@ -1,2 +1,4 @@
 # mac_terminal
-My mac terminal setup
+My ITerm mac terminal utilities. 
+
+
