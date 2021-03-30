@@ -1,2 +1,6 @@
 # mac_terminal
-My mac terminal setup
+My ITerm mac terminal utilities. 
+
+
+## Customizations
+[Themes](https://github.com/MohamedElashri/mac_terminal/tree/main/Themes)
