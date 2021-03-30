@@ -15,16 +15,22 @@ zsh omz_installer.sh
 
 Restart iTerm2 to experience the new world of Oh My Zsh.
 
-```sh ./omz_installer.sh```
+```
+sh ./omz_installer.sh
+```
 
 
 Check the installed version with:
 
 
-```zsh --version```
+```
+zsh --version
+```
 
 Upgrade it with
 
-```upgrade_oh_my_zsh```
+```
+upgrade_oh_my_zsh
+```
 
 
