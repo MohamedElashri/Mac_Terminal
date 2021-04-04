@@ -59,7 +59,7 @@ Change the ZSH_THEME value to:
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Save and update the changes by running the command source ~/.zshrc. Powerlevel10k's configuration wizard should start automatically; enter p10k configure if it doesn't. Now you can start choosing the user interface options.
+Save and update the changes by running the command `source ~/.zshrc`. Powerlevel10k's configuration wizard should start automatically; enter p10k configure if it doesn't. Now you can start choosing the user interface options.
 
 
 ## plugins
