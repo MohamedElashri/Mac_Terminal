@@ -1,5 +1,5 @@
 # mac_terminal
-My ITerm mac terminal utilities. 
+My ITerm2 mac terminal utilities. 
 
 
 ## Customizations
