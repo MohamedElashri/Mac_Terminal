@@ -1,7 +1,7 @@
 # Custom My Terminal
 
 
-##Oh My Zsh
+## Oh My Zsh
 
 To install the famous framework
 
