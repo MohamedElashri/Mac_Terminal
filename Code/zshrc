@@ -252,3 +252,6 @@ alias rest="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 
 # Reload the shell (i.e. invoke as a login shell)
 alias restart_shell="exec ${SHELL} -l"
+
+# colorize cat by using pygmentize python package
+alias cat='pygmentize -g'
