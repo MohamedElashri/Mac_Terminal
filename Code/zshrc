@@ -25,7 +25,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -50,7 +50,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -78,12 +78,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
-plugins=( git zsh-syntax-highlighting zsh-autosuggestions)
+
+plugins=(zsh-apple-touchbar sublime command-not-found common-aliases  git zsh-syntax-highlighting zsh-autosuggestions)
+#plugins=(sublime)
+#plugins=(command-not-found)
+#plugins=(common-aliases)
+#plugins=(zsh-apple-touchbar)
+
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+ export PATH=/usr/local/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -120,16 +126,16 @@ export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 
 
 
-# <<<< Aliases <<<
+# <<<< Aliases I'm definin <<<
 
 ## Colorize the ls output ##
 #alias ls='ls --color=auto'
 
 ## Use a long listing format ##
-alias ll='ls -la'
+#alias ll='ls -la'
 
 ## Show hidden files ##
-alias l.='ls -d .* --color=auto'
+#alias l.='ls -d .* --color=auto'
 
 alias c='clear'
 
@@ -137,7 +143,7 @@ alias c='clear'
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade"
 
 # Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
+#alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -151,11 +157,9 @@ alias diff='colordiff'
 alias mount='mount |column -t'
 
 # handy short cuts #
-alias h='history'
+#alias h='history'
 alias j='jobs -l'
 
-#get my ip address
-alias myip='curl icanhazip.com'
 
 #reload terminal
 alias reload='source ~/.zshrc'
@@ -163,7 +167,7 @@ alias reload='source ~/.zshrc'
 # upgrade homebrew packages
 alias upgrade='brew upgrade'
 
-alias st='open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+#alias st='open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # terminal stats
 alias stats='zsh_stats'
@@ -193,3 +197,58 @@ alias su='sudo -i'
 
 ## Resume wget by default  ##
 alias wget='wget -c'
+
+# edit nano settings
+alias edit_nano='nano ~/.nanorc'
+
+# exit commands
+alias :q="exit"
+alias ext="exit"
+alias xt="exit"
+alias by="exit"
+alias bye="exit"
+alias die="exit"
+alias quit="exit"
+
+# Confirmation
+
+    alias mv='mv -i'
+    alias cp='cp -i'
+    alias ln='ln -i'
+#    alias rm='rm -I --preserve-root'
+
+# Parenting changing perms on /
+
+    alias chown='chown --preserve-root'
+    alias chmod='chmod --preserve-root'
+    alias chgrp='chgrp --preserve-root'
+
+# Grabs the disk usage in the current directory
+
+    alias usage='du -ch | grep total'
+
+# Gets the total disk usage on your machine
+
+    alias totalusage='df -hl --total | grep total'
+# open firefox
+
+alias firefox='open -a /Applications/Firefox.app'
+alias web='open -a /Applications/Firefox.app'
+
+# IP addresses
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Merge PDF files, preserving hyperlinks
+# Usage: `mergepdf input{1,2,3}.pdf`
+alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+
+# Lock the screen (when going AFK)
+alias rest="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias restart_shell="exec ${SHELL} -l"
