@@ -255,3 +255,4 @@ alias restart_shell="exec ${SHELL} -l"
 
 # colorize cat by using pygmentize python package
 alias cat='pygmentize -g'
+alias cat="ccat $*" #this is much faster than a python script'
