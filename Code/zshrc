@@ -79,7 +79,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(zsh-apple-touchbar sublime command-not-found common-aliases  git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(copyfile copydir autoupdate exa-zsh auto-notify zsh-apple-touchbar sublime command-not-found common-aliases  git zsh-syntax-highlighting zsh-autosuggestions)
 #plugins=(sublime)
 #plugins=(command-not-found)
 #plugins=(common-aliases)
@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # python homebrew as defult
 #export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
-
+ZSH_CUSTOM_AUTOUPDATE_QUIET=true
 
 
 
@@ -254,5 +254,8 @@ alias rest="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias restart_shell="exec ${SHELL} -l"
 
 # colorize cat by using pygmentize python package
-alias cat='pygmentize -g'
+alias pycat='pygmentize -g'
 alias cat="ccat $*" #this is much faster than a python script'
+
+# exa instead of ls
+alias ls='exa'
