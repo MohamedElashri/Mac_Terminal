@@ -1,4 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -79,7 +80,8 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(copyfile copydir autoupdate exa-zsh auto-notify zsh-apple-touchbar sublime command-not-found common-aliases  git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(history encode64 extract cp copyfile copydir autoupdate exa-zsh auto-notify zsh-apple-touchbar sublime
+command-not-found common-aliases  git zsh-syntax-highlighting zsh-autosuggestions)
 #plugins=(sublime)
 #plugins=(command-not-found)
 #plugins=(common-aliases)
@@ -175,8 +177,12 @@ alias stats='zsh_stats'
 # To exit terminal
 alias e='exit'
 
+# hacker news in terminal
+alias hn='clx'
+
+
 # The alias that takes me here - to editing these very aliases
-alias edit_profile='nano ~/.zshrc'
+alias edit_profile='micro ~/.zshrc'
 
 # Speed-up Terminal load time by clearing system logs
 alias speedup="sudo rm -rf /private/var/log/asl/*"
@@ -238,7 +244,7 @@ alias web='open -a /Applications/Firefox.app'
 # IP addresses
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
+alias myip='curl ifconfig.me && echo'
 # Merge PDF files, preserving hyperlinks
 # Usage: `mergepdf input{1,2,3}.pdf`
 alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'
@@ -259,3 +265,21 @@ alias cat="ccat $*" #this is much faster than a python script'
 
 # exa instead of ls
 alias ls='exa'
+
+# using micro editor instead of vim
+alias vim='micro'
+
+#turn on IP6 on MAC
+alias ip6_on='sudo networksetup -setv6automatic Wi-Fi'
+
+# turn it off
+alias ip6_off='sudo networksetup -setv6off Wi-Fi'
+
+# Internet speed from terminal
+alias speedtest='speedtest-cli'
+
+# find apps downloaded from app store
+alias find_apps='mdfind kMDItemAppStoreHasReceipt=1'
+
+# generate secure password and copy it to the clipboard
+alias generate_password='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
