@@ -136,7 +136,7 @@ ZSH_CUSTOM_AUTOUPDATE_QUIET=true
 ## Use a long listing format ##
 #alias ll='ls -la'
 
-## Show hidden files ##
+## Show hidden files ##qq
 #alias l.='ls -d .* --color=auto'
 
 alias c='clear'
@@ -283,3 +283,6 @@ alias find_apps='mdfind kMDItemAppStoreHasReceipt=1'
 
 # generate secure password and copy it to the clipboard
 alias generate_password='LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
+
+# edit host
+alias edit_host='sudo nano /etc/hosts'
