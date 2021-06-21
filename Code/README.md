@@ -50,7 +50,7 @@ Then enable it in ~/.zshrc. Open the config file (.zshrc) by running:
 
 
 ```
-Nano ~/.zshrc
+nano ~/.zshrc
 ```
 
 Change the ZSH_THEME value to: 
