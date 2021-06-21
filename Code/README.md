@@ -6,7 +6,7 @@
 To install the famous framework
 
 ```
-$ curl -fsSL --output omz_installer.sh
+curl -fsSL --output omz_installer.sh
 https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 ```
 
