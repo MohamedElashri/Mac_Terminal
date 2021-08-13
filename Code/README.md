@@ -80,13 +80,20 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
+3. [exa-zsh](https://github.com/MohamedElashri/exa-zsh): This plugin defines useful aliases that can be used for `exa` the moden alternative of `ls.`Install with the following code 
 
+```
+cd $ZSH_CUSTOM/plugins/
+git clone https://github.com/MohamedElashri/exa-zsh
+```
+
+4. [cp](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cp): This plugin defines a `cpv` function that uses `rsync` so that you get the features and security of this command.
 
 
 To activate the plugins, in ~/.zshrc, change the line that starts with plugins= to:
 
 ```
-plugins=( git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=( git zsh-syntax-highlighting zsh-autosuggestions exa-zsh cp)
 ```
 
 Restart the terminal to start the journey. 
