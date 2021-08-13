@@ -90,10 +90,19 @@ git clone https://github.com/MohamedElashri/exa-zsh
 4. [cp](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cp): This plugin defines a `cpv` function that uses `rsync` so that you get the features and security of this command.
 
 
+5. [copyfile](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile):  Puts the contents of a file in your system clipboard so you can paste it anywhere. Install using the following:
+
+```
+cd $ZSH_CUSTOM/plugins/
+git clone https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copyfile
+```
+
+
+
 To activate the plugins, in ~/.zshrc, change the line that starts with plugins= to:
 
 ```
-plugins=( git zsh-syntax-highlighting zsh-autosuggestions exa-zsh cp)
+plugins=( git zsh-syntax-highlighting zsh-autosuggestions exa-zsh cp copyfile) 
 ```
 
 Restart the terminal to start the journey. 
